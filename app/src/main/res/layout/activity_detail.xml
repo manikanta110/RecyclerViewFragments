@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="examples.view.com.navgridrec.Activities.DetailActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="6dp"
+        android:id="@+id/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/de_title"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/de_title"
+            android:scaleType="fitCenter"
+
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/de_poster"
+            />
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_marginTop="13dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/de_poster"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textSize="18dp"
+                android:text="Release date:"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/de_release_date"/>
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/de_release"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/story"
+            android:textAlignment="center"
+            android:text="Story of the Movie:"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_below="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.CardView
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="6dp"
+            android:layout_below="@+id/story"
+            android:elevation="10dp"
+            >
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="italic"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/de_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"/>
+            </ScrollView>
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
